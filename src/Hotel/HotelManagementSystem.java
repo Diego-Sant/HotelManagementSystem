@@ -42,6 +42,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 		
 		bttn.setBackground(Color.BLACK);
 		bttn.setForeground(Color.WHITE);
+		bttn.setFocusable(false);
 		
 		ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("Icons/FundoHotel.png"));
 		Image img2 = img.getImage().getScaledInstance(710, 444, Image.SCALE_DEFAULT);

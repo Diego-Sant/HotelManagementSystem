@@ -80,7 +80,7 @@ public class Dashboard extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//new AddEmployee().setVisible(true);
+					new AddEmployee().setVisible(true);
 				}
 				catch(Exception e) {
 					e.printStackTrace();
@@ -104,7 +104,7 @@ public class Dashboard extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//new AddDrivers().setVisible(true);
+					new AddDrivers().setVisible(true);
 				}
 				catch(Exception e) {
 					e.printStackTrace();
@@ -115,7 +115,7 @@ public class Dashboard extends JFrame {
     	HMMenuItem.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent actionEvent){
             	try {
-            		//new Reception().setVisible(true);
+            		new Reception().setVisible(true);
             	}
             	catch (Exception e) {
             		e.printStackTrace();
