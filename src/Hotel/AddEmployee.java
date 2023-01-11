@@ -2,8 +2,10 @@ package Hotel;
 
 import java.awt.Choice;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -40,9 +42,11 @@ public class AddEmployee extends JFrame implements ActionListener {
 		super("Adicionar funcionários");
 		jp = new JPanel();
 		setSize(900, 600);
-		setLocation(450, 200);
 		jp.setLayout(null);
 		this.setResizable(false);
+		
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 
 		jp.setBounds(0, 0, 883, 560);
 		jp.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
@@ -254,7 +258,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 					String cpf = t5.getText();
 					String email = t6.getText();
 					
-					String query = "INSERT INTO driver VALUES('" 
+					String query = "INSERT INTO employee VALUES('" 
 							+ name + "', '" + birthDate + "', '" + gender 
 							+ "', '" + job + "', '" + salary + "', '" 
 							+ phone + "', '" + cpf + "', '" + email + "')";

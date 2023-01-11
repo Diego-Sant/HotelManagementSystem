@@ -1,8 +1,10 @@
 package Hotel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -30,7 +32,8 @@ public class Dashboard extends JFrame {
         this.setResizable(false);
         
         setSize(1750, 1000);
-        setLocation(100, 20);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
 		jp = new JPanel();
 		jp.setBounds(0, 0, 1733, 938);

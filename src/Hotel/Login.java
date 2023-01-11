@@ -1,8 +1,10 @@
 package Hotel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -35,7 +37,8 @@ public class Login extends JFrame implements ActionListener {
         this.setResizable(false);
        
         setSize(600,300);
-        setLocation(600,350);
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		jp = new JPanel();
 		jp.setBounds(0, 0, 583, 260);

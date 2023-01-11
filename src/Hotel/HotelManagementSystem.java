@@ -1,8 +1,10 @@
 package Hotel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,9 +28,11 @@ public class HotelManagementSystem extends JFrame implements ActionListener {
 		super("Menu inicial");
 		setSize(710, 444);
 		setLayout(null);
-		setLocation(550, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
+        
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		jp = new JPanel();
 		jp.setBounds(0, 0, 694, 404);

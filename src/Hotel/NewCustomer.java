@@ -2,9 +2,11 @@ package Hotel;
 
 import java.awt.Choice;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
@@ -43,9 +45,11 @@ public class NewCustomer extends JFrame implements ActionListener {
 		super("Adicionar cliente(s)");
 		jp = new JPanel();
 		setSize(850, 550);
-		setLocation(530, 200);
 		jp.setLayout(null);
 		this.setResizable(false);
+		
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		jp.setBounds(0, 0, 833, 510);
 		jp.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
@@ -505,7 +509,7 @@ public class NewCustomer extends JFrame implements ActionListener {
 							+ country + "', '" + room_number + "', '" 
 							+ status + "', '" + checkin + "', '" + checkout + "', '" + deposit + "')";
 					
-					c.st.executeQuery(query);
+					c.st.executeUpdate(query);
 					JOptionPane.showMessageDialog(null, "Cliente inserido com sucesso!");
 					new Reception().setVisible(true);
 					setVisible(false);

@@ -1,7 +1,9 @@
 package Hotel;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,8 +24,10 @@ public class Reception extends JFrame {
 	public Reception() {
 		super("Recepção");
         setSize(850, 570);
-        setLocation(550, 250);
         this.setResizable(false);
+        
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
 		jp = new JPanel();
 		jp.setLayout(null);
@@ -70,8 +74,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//Room room = new Room();
-					//room.setVisible(true);
+					Room room = new Room();
+					room.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -92,8 +96,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//Employee emp = new Employee();
-					//emp.setVisible(true);
+					Employee emp = new Employee();
+					emp.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -114,8 +118,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//CustomerInfo cust = new CustomerInfo();
-					//cust.setVisible(true);
+					CustomerInfo cust = new CustomerInfo();
+					cust.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
