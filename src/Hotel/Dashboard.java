@@ -92,7 +92,7 @@ public class Dashboard extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//new AddRoom().setVisible(true);
+					new AddRoom().setVisible(true);
 				}
 				catch(Exception e) {
 					e.printStackTrace();

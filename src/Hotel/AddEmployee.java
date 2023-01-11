@@ -112,6 +112,7 @@ public class AddEmployee extends JFrame implements ActionListener {
 		jp.add(l3);
 	        
 	    cb = new JComboBox<String>(new String[] { "Homem", "Mulher", "Indefinido" });
+		cb.setSelectedIndex(-1);
 	    cb.setBounds(155, 150, 150, 27);
 	    cb.setBackground(Color.WHITE);
 		jp.add(cb);
@@ -224,14 +225,14 @@ public class AddEmployee extends JFrame implements ActionListener {
 		
 		b1 = new JButton("Adicionar");
 		b1.addActionListener(this);
-		b1.setBounds(184, 480, 111, 33);
+		b1.setBounds(204, 480, 111, 33);
 		b1.setBackground(Color.BLACK);
 		b1.setForeground(Color.WHITE);
 		jp.add(b1);
 
 		b2 = new JButton("Voltar");
 		b2.addActionListener(this);
-		b2.setBounds(54, 480, 111, 33);
+		b2.setBounds(74, 480, 111, 33);
 		b2.setBackground(Color.BLACK);
 		b2.setForeground(Color.WHITE);
 		jp.add(b2);

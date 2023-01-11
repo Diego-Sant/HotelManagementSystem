@@ -48,8 +48,7 @@ public class AddDrivers extends JFrame implements ActionListener {
 		jp.setBounds(0, 0, 983, 460);
 		jp.setBackground(new Color(1.0f, 1.0f, 1.0f, 0.0f));
 		jp.setBorder(new TitledBorder(new LineBorder(new Color(50, 190, 166), 2), // ((r: g: b:), thickness)
-		"Adicionar motoristas", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(50, 190, 166)));
-																													
+		"Adicionar motoristas", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(50, 190, 166)));																											
 		add(jp);
 
 		ImageIcon img = new ImageIcon(ClassLoader.getSystemResource("Icons/Driver.png"));
@@ -113,6 +112,7 @@ public class AddDrivers extends JFrame implements ActionListener {
 		jp.add(l3);
 	        
 	    cb = new JComboBox<String>(new String[] { "Homem", "Mulher", "Indefinido" });
+		cb.setSelectedIndex(-1);
 	    cb.setBounds(174, 152, 156, 20);
 	    cb.setBackground(Color.WHITE);
 		jp.add(cb);

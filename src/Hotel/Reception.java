@@ -48,8 +48,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//NewCustomer custom = new NewCustomer();
-					//custom.setVisible(true);
+					NewCustomer custom = new NewCustomer();
+					custom.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
