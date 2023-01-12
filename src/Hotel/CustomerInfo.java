@@ -1,4 +1,4 @@
-package Hotel;
+package hotel;
 
 import java.awt.Color;
 import java.awt.Dimension;

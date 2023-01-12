@@ -1,4 +1,4 @@
-package Hotel;
+package hotel;
 
 import java.awt.Choice;
 import java.awt.Color;
@@ -35,11 +35,11 @@ public class NewCustomer extends JFrame implements ActionListener {
 	Connection conn = null;
 	PreparedStatement pst = null;
 	private JPanel jp;
-	private JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9;
+	private JTextField t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
 	JComboBox<String> cb, cb2, cb3;
 	Choice ch, ch2, ch3;
 	JLabel l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13;
-	JButton b1, b2;
+	JButton b1, b2, b3;
 	
 	public NewCustomer() throws SQLException {
 		super("Adicionar cliente(s)");
@@ -374,7 +374,7 @@ public class NewCustomer extends JFrame implements ActionListener {
         catch (Exception e) {
         	e.printStackTrace();
         }
-        ch2.setBounds(140, 231, 150, 20);
+        ch2.setBounds(140, 231, 80, 20);
         jp.add(ch2);
         
         //---------------------------------------------------------------------
@@ -385,20 +385,35 @@ public class NewCustomer extends JFrame implements ActionListener {
 		l11.setBounds(310, 233, 50, 14);
 		jp.add(l11);
 		
-        ch3 = new Choice();
-        try {
-        	Conn c = new Conn();
-        	ResultSet rs = c.st.executeQuery("SELECT * FROM room");
-        	
-        	while (rs.next()) {
-        		ch3.add(rs.getString("price"));
-        	}
-        }
-        catch (Exception e) {
-        	e.printStackTrace();
-        }
-        ch3.setBounds(370, 231, 100, 20);
-        jp.add(ch3);
+		ImageIcon img4 = new ImageIcon(ClassLoader.getSystemResource("Icons/Check.png"));
+		Image img5 = img4.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
+		ImageIcon img6 = new ImageIcon(img5);
+		b3 = new JButton(img6);
+		b3.setBounds(230, 231, 20, 20);
+		b3.setBackground(new Color(238, 238, 238));
+		b3.setBorderPainted(false);
+		jp.add(b3);
+		
+        b3.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    
+                    Conn c = new Conn();
+                    String rn = ch2.getSelectedItem();
+                    ResultSet rs = c.st.executeQuery("SELECT * FROM room HAVING room_number = " + rn);
+                    
+                    if(rs.next()){
+                        t10.setText(rs.getString("price"));    
+                    }
+                }catch(Exception e){
+                	e.printStackTrace();
+                }
+            }
+        });
+		
+		t10 = new JTextField();
+        t10.setBounds(370, 231, 100, 20);
+        jp.add(t10);
         
         //---------------------------------------------------------------------
         
@@ -503,13 +518,16 @@ public class NewCustomer extends JFrame implements ActionListener {
 					String deposit = t8.getText();
 					
 					String query = "INSERT INTO customer VALUES('" 
-							+ id + "', '" + cpf + "', '" + rg + "', '" 
-							+ passport_number + "', '" + cnh_rg + "', '" 
-							+ name + "', '" + phone + "', '" + gender + "', '" 
-							+ country + "', '" + room_number + "', '" 
-							+ status + "', '" + checkin + "', '" + checkout + "', '" + deposit + "')";
+							+ id + "', '" + phone + "', '" + name + "', '" 
+							+ gender + "', '" + country + "', '" 
+							+ room_number + "', '" + status + "', '" + deposit + "', '" 
+							+ cpf + "', '" + rg + "', '" 
+							+ passport_number + "', '" + cnh_rg + "', '" + checkin + "', '" + checkout + "')";
+					
+					String updateSQL = "UPDATE room SET availability = 'Indisponível' WHERE room_number = " + room_number;
 					
 					c.st.executeUpdate(query);
+					c.st.executeUpdate(updateSQL);
 					JOptionPane.showMessageDialog(null, "Cliente inserido com sucesso!");
 					new Reception().setVisible(true);
 					setVisible(false);
