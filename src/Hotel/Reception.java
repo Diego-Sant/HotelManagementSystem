@@ -140,8 +140,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//ManagerInfo manager = new ManagerInfo();
-					//manager.setVisible(true);
+					ManagerInfo manager = new ManagerInfo();
+					manager.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -162,8 +162,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//CheckOut check = new CheckOut();
-					//check.setVisible(true);
+					CheckOut check = new CheckOut();
+					check.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -177,28 +177,6 @@ public class Reception extends JFrame {
         jp.add(bttnCheckOutInfo);
         
         //---------------------------------------------------------------------
-        
-        JButton bttnCheckStatus = new JButton("Atualizar status de check");
-        bttnCheckStatus.setFocusable(false);
-        bttnCheckStatus.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent actionEvent) {
-				try {
-					//UpdateCheck updateCheck = new UpdateCheck();
-					//updateCheck.setVisible(true);
-					setVisible(false);
-				}
-				catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-        bttnCheckStatus.setBounds(10, 310, 220, 30);
-        bttnCheckStatus.setBackground(Color.BLACK);
-        bttnCheckStatus.setForeground(Color.WHITE);
-        jp.add(bttnCheckStatus);
-        
-        //---------------------------------------------------------------------
 	
         JButton bttnRoomStatus = new JButton("Atualizar status de quartos");
         bttnRoomStatus.setFocusable(false);
@@ -206,8 +184,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//UpdateRoom updateRoom = new UpdateRoom();
-					//updateRoom.setVisible(true);
+					UpdateRoom updateRoom = new UpdateRoom();
+					updateRoom.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -215,7 +193,7 @@ public class Reception extends JFrame {
 				}
 			}
 		});
-        bttnRoomStatus.setBounds(10, 350, 220, 30);
+        bttnRoomStatus.setBounds(10, 310, 220, 30);
         bttnRoomStatus.setBackground(Color.BLACK);
         bttnRoomStatus.setForeground(Color.WHITE);
         jp.add(bttnRoomStatus);
@@ -228,8 +206,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//PickUp pickUp = new PickUp();
-					//pickUp.setVisible(true);
+					PickUp pickUp = new PickUp();
+					pickUp.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -237,7 +215,7 @@ public class Reception extends JFrame {
 				}
 			}
 		});
-        bttnPickUp.setBounds(10, 390, 220, 30);
+        bttnPickUp.setBounds(10, 350, 220, 30);
         bttnPickUp.setBackground(Color.BLACK);
         bttnPickUp.setForeground(Color.WHITE);
         jp.add(bttnPickUp);
@@ -250,8 +228,8 @@ public class Reception extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvent) {
 				try {
-					//SearchRoom search = new SearchRoom();
-					//search.setVisible(true);
+					SearchRoom search = new SearchRoom();
+					search.setVisible(true);
 					setVisible(false);
 				}
 				catch (Exception e) {
@@ -259,7 +237,7 @@ public class Reception extends JFrame {
 				}
 			}
 		});
-        bttnSearchRoom.setBounds(10, 430, 220, 30);
+        bttnSearchRoom.setBounds(10, 390, 220, 30);
         bttnSearchRoom.setBackground(Color.BLACK);
         bttnSearchRoom.setForeground(Color.WHITE);
         jp.add(bttnSearchRoom);

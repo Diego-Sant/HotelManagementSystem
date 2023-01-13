@@ -161,6 +161,7 @@ public class CheckOut extends JFrame implements ActionListener {
 					e.printStackTrace();
 				}
 			} else if (actionEvent.getSource() == bttn3) {
+				new Reception().setVisible(true);
 				this.setVisible(false);
 			}
 			
