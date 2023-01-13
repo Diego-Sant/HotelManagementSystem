@@ -53,55 +53,55 @@ public class CustomerInfo extends JFrame implements ActionListener {
 		jp.add(l1);
 		
 		l2 = new JLabel("CPF");
-		l2.setBounds(113, 20, 45, 14);
+		l2.setBounds(651, 20, 45, 14);
 		jp.add(l2);
 		
 		l3 = new JLabel("RG");
-		l3.setBounds(192, 20, 45, 14);
+		l3.setBounds(735, 20, 45, 14);
 		jp.add(l3);
 		
 		l4 = new JLabel("Passaporte");
-		l4.setBounds(245, 20, 70, 14);
+		l4.setBounds(790, 20, 70, 14);
 		jp.add(l4);
 		
 		l4 = new JLabel("CNH");
-		l4.setBounds(345, 20, 45, 14);
+		l4.setBounds(889, 20, 45, 14);
 		jp.add(l4);
 		
 		l6 = new JLabel("Nome");
-		l6.setBounds(413, 20, 46, 14);
+		l6.setBounds(184, 20, 46, 14);
 		jp.add(l6);
 		
 		l5 = new JLabel("Celular");
-		l5.setBounds(486, 20, 46, 14);
+		l5.setBounds(105, 20, 46, 14);
 		jp.add(l5);
 		
 		l7 = new JLabel("Sexo");
-		l7.setBounds(570, 20, 46, 14);
+		l7.setBounds(254, 20, 46, 14);
 		jp.add(l7);
 		
 		l8 = new JLabel("País");
-		l8.setBounds(646, 20, 46, 14);
+		l8.setBounds(344, 20, 46, 14);
 		jp.add(l8);
 		
 		l9 = new JLabel("Nº do quarto");
-		l9.setBounds(709, 20, 80, 14);
+		l9.setBounds(399, 20, 80, 14);
 		jp.add(l9);
 		
 		l10 = new JLabel("Status");
-		l10.setBounds(800, 20, 46, 14);
+		l10.setBounds(490, 20, 46, 14);
 		jp.add(l10);
 		
 		l12 = new JLabel("Check-In");
-		l12.setBounds(872, 20, 60, 14);
+		l12.setBounds(950, 20, 60, 14);
 		jp.add(l12);
 		
 		l13 = new JLabel("Check-Out");
-		l13.setBounds(947, 20, 60, 14);
+		l13.setBounds(1024, 20, 60, 14);
 		jp.add(l13);
 		
 		l11 = new JLabel("Total");
-		l11.setBounds(1035, 20, 46, 14);
+		l11.setBounds(571, 20, 46, 14);
 		jp.add(l11);
 		
 		b1 = new JButton("Carregar dados");
